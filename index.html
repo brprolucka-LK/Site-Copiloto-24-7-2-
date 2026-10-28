@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Copiloto 24/7: análise crítica da fadiga da decisão assistida por IA, ansiedade de performance e erosão da agência técnica de jovens profissionais em regimes remotos e assíncronos.">
+  <meta name="keywords" content="futuro do trabalho, geração Z, IA, burnout, fadiga digital, trabalho remoto, direito à desconexão, socioemocional">
+  <meta name="author" content="Dupla de Desenvolvimento - Atividade Prática Front-end & Copilotagem">
+  <meta name="theme-color" content="#0f172a">
+  <title>Copiloto 24/7 | Fadiga da Decisão Assistida e Agência Técnica na Geração Z</title>
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
+  <!-- Custom Design System -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Skip link acessibilidade -->
+  <a href="#conteudo-principal" class="visually-hidden-focusable skip-link">Ir para o conteúdo principal</a>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
+          <span class="brand-icon" aria-hidden="true"><i class="bi bi-cpu"></i></span>
+          <span class="fw-bold">Copiloto <span class="text-accent">24/7</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal" aria-controls="navPrincipal" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navPrincipal">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="#contexto">Contexto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#dados">Dados</a></li>
+            <li class="nav-item"><a class="nav-link" href="#diagnostico">Diagnóstico</a></li>
+            <li class="nav-item"><a class="nav-link" href="#protocolo">Protocolo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item ms-lg-2">
+              <button type="button" class="btn btn-theme-toggle" id="btnTheme" aria-label="Alternar tema claro ou escuro" title="Alternar tema">
+                <i class="bi bi-moon-stars-fill" id="iconTheme" aria-hidden="true"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo-principal">
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="row align-items-center min-vh-100 py-5">
+          <div class="col-lg-7">
+            <span class="badge badge-soft mb-3">Recorte inovador · Eixos Trabalho + Socioemocional</span>
+            <h1 id="hero-title" class="display-4 fw-bold hero-title">
+              Copiloto <span class="text-gradient">24/7</span>
+            </h1>
+            <p class="lead hero-lead">
+              A fadiga da decisão assistida por IA e a erosão da agência técnica de jovens profissionais em regimes remotos e assíncronos.
+            </p>
+            <p class="text-muted-hero">
+              Quando a inteligência artificial se torna o primeiro interlocutor do dia de trabalho, o ganho de velocidade convive com perda de confiança interna, fragmentação da atenção e ansiedade de performance — especialmente na Geração Z.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#diagnostico" class="btn btn-primary btn-lg px-4">
+                <i class="bi bi-activity me-2" aria-hidden="true"></i>Fazer diagnóstico
+              </a>
+              <a href="#dados" class="btn btn-outline-light btn-lg px-4">
+                Ver evidências
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="hero-visual glass-card p-4">
+              <div class="stat-grid">
+                <div class="stat-item">
+                  <span class="stat-num">71%</span>
+                  <span class="stat-label">Gen Z: preocupação com IA afetou saúde mental</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-num">66%</span>
+                  <span class="stat-label">Burnout reportado pela Geração Z</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-num">58%</span>
+                  <span class="stat-label">Fadiga digital regular (Gen Z)</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-num">61%</span>
+                  <span class="stat-label">Burnout em regime 100% remoto</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTEXTO ========== -->
+    <section id="contexto" class="section-pad" aria-labelledby="contexto-title">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <h2 id="contexto-title" class="section-title">O paradoxo da disponibilidade infinita</h2>
+            <p class="section-subtitle">
+              Ferramentas de copilotagem e ambientes assíncronos prometem autonomia. Na prática, muitos jovens profissionais experimentam o oposto: pressão constante de resposta, validação algorítmica e dificuldade de sustentar o “deep work”.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100 feature-card">
+              <div class="card-body">
+                <div class="icon-wrap mb-3" aria-hidden="true"><i class="bi bi-robot"></i></div>
+                <h3 class="h5 card-title">IA como colega permanente</h3>
+                <p class="card-text">
+                  A IA deixa de ser ferramenta pontual e vira interlocutor de primeira linha. O custo oculto: decisões menores são terceirizadas, e a tolerância à ambiguidade cai.
+                </p>
+                <span class="badge text-bg-primary">Eixo A · Futuro do Trabalho</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100 feature-card">
+              <div class="card-body">
+                <div class="icon-wrap mb-3" aria-hidden="true"><i class="bi bi-phone-vibrate"></i></div>
+                <h3 class="h5 card-title">Always-on assíncrono</h3>
+                <p class="card-text">
+                  Notificações, threads e dashboards de produtividade apagam a fronteira entre jornada e vida pessoal. O “direito à desconexão” permanece retórica para a maioria.
+                </p>
+                <span class="badge text-bg-warning">Eixo A · Direitos digitais</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="card h-100 feature-card">
+              <div class="card-body">
+                <div class="icon-wrap mb-3" aria-hidden="true"><i class="bi bi-person-hearts"></i></div>
+                <h3 class="h5 card-title">Faceta socioemocional</h3>
+                <p class="card-text">
+                  Adaptabilidade e busca por propósito convivem com FOMO profissional, síndrome do impostor amplificada por LLMs e solidão em regimes 100% remotos.
+                </p>
+                <span class="badge text-bg-info">Eixo B · Geração atual</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Facetas positivas x críticas -->
+        <div class="row g-4 mt-2">
+          <div class="col-lg-6">
+            <div class="glass-card p-4 h-100">
+              <h3 class="h5 mb-3"><i class="bi bi-emoji-smile me-2 text-success" aria-hidden="true"></i>Facetas positivas</h3>
+              <ul class="list-check">
+                <li>Fluência nativa com interfaces e ferramentas de IA</li>
+                <li>Valorização de propósito e impacto social no trabalho</li>
+                <li>Preferência por horizontalidade e transparência</li>
+                <li>Facilidade de colaboração em redes assíncronas globais</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="glass-card p-4 h-100">
+              <h3 class="h5 mb-3"><i class="bi bi-emoji-frown me-2 text-danger" aria-hidden="true"></i>Facetas críticas</h3>
+              <ul class="list-check critical">
+                <li>Ansiedade de produtividade e FOMO profissional</li>
+                <li>Síndrome do impostor frente à “inteligência” das máquinas</li>
+                <li>Fragmentação da atenção e fadiga de tela crônica</li>
+                <li>Isolamento interpessoal e validação em tempo real</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DADOS / VISUALIZAÇÕES ========== -->
+    <section id="dados" class="section-pad bg-alt" aria-labelledby="dados-title">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <h2 id="dados-title" class="section-title">Evidências em dados</h2>
+            <p class="section-subtitle">
+              Métricas recentes sobre burnout, fadiga digital, impacto da IA na saúde mental e isolamento no trabalho remoto — com ênfase na Geração Z.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="chart-card glass-card p-4 h-100">
+              <h3 class="h6 mb-3">Burnout por geração (%)</h3>
+              <canvas id="chartBurnout" height="220" aria-label="Gráfico de barras: taxas de burnout por geração" role="img"></canvas>
+              <p class="chart-source small text-muted mt-2 mb-0">Fonte: Eagle Hill Consulting (2025) — Gen Z 66%, Millennials 58%, Gen X 53%, Boomers 37%.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="chart-card glass-card p-4 h-100">
+              <h3 class="h6 mb-3">Impacto da preocupação com IA na saúde mental</h3>
+              <canvas id="chartIA" height="220" aria-label="Gráfico de barras: preocupação com IA e saúde mental por geração" role="img"></canvas>
+              <p class="chart-source small text-muted mt-2 mb-0">Fonte: Sylvia Brafman Mental Health Center (2026) — 71% Gen Z vs 28% Boomers relatam efeito negativo.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="chart-card glass-card p-4 h-100">
+              <h3 class="h6 mb-3">Burnout por regime de trabalho</h3>
+              <canvas id="chartRegime" height="220" aria-label="Gráfico de rosca: burnout remoto, híbrido e geral" role="img"></canvas>
+              <p class="chart-source small text-muted mt-2 mb-0">Fonte: Eagle Hill / Apollo Technical (2025-2026) — remoto 61%, híbrido 57%, geral 55%.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="chart-card glass-card p-4 h-100">
+              <h3 class="h6 mb-3">Sinais de sobrecarga digital (Gen Z)</h3>
+              <canvas id="chartSinais" height="220" aria-label="Gráfico de barras horizontais: fadiga digital e sinais relacionados" role="img"></canvas>
+              <p class="chart-source small text-muted mt-2 mb-0">Fontes: Deloitte Gen Z & Millennial Survey (2026); pesquisas de isolamento remoto.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MICROAPLICAÇÃO: DIAGNÓSTICO ========== -->
+    <section id="diagnostico" class="section-pad" aria-labelledby="diag-title">
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8 text-center">
+            <h2 id="diag-title" class="section-title">Diagnóstico de Fadiga da Decisão Assistida</h2>
+            <p class="section-subtitle">
+              Responda com honestidade. O score combina intensidade de uso de IA, fragmentação de atenção, capacidade de desconexão e percepção de agência técnica.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="glass-card p-4 p-md-5" id="quizCard">
+              <div class="progress mb-4" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do questionário">
+                <div class="progress-bar" id="quizProgress" style="width: 0%"></div>
+              </div>
+
+              <form id="formDiagnostico" novalidate>
+                <!-- Q1 -->
+                <fieldset class="quiz-step" data-step="1">
+                  <legend class="h5 mb-3">1. Em um dia típico de trabalho, quantas horas você interage ativamente com ferramentas de IA (chat, copilot, geradores)?</legend>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q1" id="q1a" value="1" required>
+                    <label class="form-check-label" for="q1a">Menos de 1 hora</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q1" id="q1b" value="2">
+                    <label class="form-check-label" for="q1b">1 a 3 horas</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q1" id="q1c" value="3">
+                    <label class="form-check-label" for="q1c">3 a 5 horas</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q1" id="q1d" value="4">
+                    <label class="form-check-label" for="q1d">Mais de 5 horas / quase contínuo</label>
+                  </div>
+                </fieldset>
+
+                <!-- Q2 -->
+                <fieldset class="quiz-step d-none" data-step="2">
+                  <legend class="h5 mb-3">2. Com que frequência você troca de contexto (abas, chats, ferramentas) por interrupções ou “só mais uma pergunta à IA”?</legend>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q2" id="q2a" value="1" required>
+                    <label class="form-check-label" for="q2a">Raramente — blocos longos de foco</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q2" id="q2b" value="2">
+                    <label class="form-check-label" for="q2b">Algumas vezes por dia</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q2" id="q2c" value="3">
+                    <label class="form-check-label" for="q2c">Dezenas de vezes; foco fragmentado</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q2" id="q2d" value="4">
+                    <label class="form-check-label" for="q2d">Quase constante; sinto dificuldade de sustentar 25+ min</label>
+                  </div>
+                </fieldset>
+
+                <!-- Q3 -->
+                <fieldset class="quiz-step d-none" data-step="3">
+                  <legend class="h5 mb-3">3. Após o expediente, você consegue se desconectar de canais de trabalho e de ferramentas de IA?</legend>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q3" id="q3a" value="1" required>
+                    <label class="form-check-label" for="q3a">Sim, com rotina clara de desconexão</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q3" id="q3b" value="2">
+                    <label class="form-check-label" for="q3b">Na maioria dos dias, com esforço</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q3" id="q3c" value="3">
+                    <label class="form-check-label" for="q3c">Raramente — notificações e “só responder rápido”</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q3" id="q3d" value="4">
+                    <label class="form-check-label" for="q3d">Quase nunca; sensação de always-on</label>
+                  </div>
+                </fieldset>
+
+                <!-- Q4 -->
+                <fieldset class="quiz-step d-none" data-step="4">
+                  <legend class="h5 mb-3">4. Quando precisa resolver um problema técnico sem IA, como se sente?</legend>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q4" id="q4a" value="1" required>
+                    <label class="form-check-label" for="q4a">Confiável — mantenho agência e raciocínio</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q4" id="q4b" value="2">
+                    <label class="form-check-label" for="q4b">Um pouco inseguro, mas consigo</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q4" id="q4c" value="3">
+                    <label class="form-check-label" for="q4c">Ansioso ou com síndrome do impostor</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q4" id="q4d" value="4">
+                    <label class="form-check-label" for="q4d">Paralisado — dependo fortemente da sugestão da IA</label>
+                  </div>
+                </fieldset>
+
+                <!-- Q5 -->
+                <fieldset class="quiz-step d-none" data-step="5">
+                  <legend class="h5 mb-3">5. Quantas vezes por semana você sente “fadiga de tela” ou sobrecarga cognitiva ao final do dia?</legend>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q5" id="q5a" value="1" required>
+                    <label class="form-check-label" for="q5a">0–1 dia</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q5" id="q5b" value="2">
+                    <label class="form-check-label" for="q5b">2–3 dias</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q5" id="q5c" value="3">
+                    <label class="form-check-label" for="q5c">4–5 dias</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="q5" id="q5d" value="4">
+                    <label class="form-check-label" for="q5d">Quase todos os dias</label>
+                  </div>
+                </fieldset>
+
+                <div class="d-flex justify-content-between mt-4">
+                  <button type="button" class="btn btn-outline-secondary" id="btnPrev" disabled>Anterior</button>
+                  <button type="button" class="btn btn-primary" id="btnNext">Próximo</button>
+                  <button type="submit" class="btn btn-success d-none" id="btnSubmit">Ver resultado</button>
+                </div>
+              </form>
+
+              <!-- Resultado -->
+              <div id="resultadoDiagnostico" class="d-none mt-4">
+                <div class="result-box text-center p-4">
+                  <p class="mb-1 text-muted small">Seu índice de Fadiga da Decisão Assistida</p>
+                  <p class="display-4 fw-bold mb-2" id="scoreNum">0</p>
+                  <p class="h5 mb-3" id="scoreLabel">—</p>
+                  <p class="mb-0" id="scoreFeedback"></p>
+                  <hr class="my-4">
+                  <h4 class="h6">Recomendações personalizadas</h4>
+                  <ul class="list-unstyled text-start" id="scoreRecs"></ul>
+                  <button type="button" class="btn btn-outline-primary mt-3" id="btnRestart">Refazer diagnóstico</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROTOCOLO DE DESCONEXÃO ========== -->
+    <section id="protocolo" class="section-pad bg-alt" aria-labelledby="proto-title">
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8 text-center">
+            <h2 id="proto-title" class="section-title">Gerador de Protocolo de Desconexão</h2>
+            <p class="section-subtitle">
+              Configure limites digitais realistas e gere um plano de bem-estar que você pode salvar ou imprimir.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="glass-card p-4 p-md-5">
+              <form id="formProtocolo">
+                <div class="mb-3">
+                  <label for="horaFim" class="form-label">Horário em que a jornada formal termina</label>
+                  <input type="time" class="form-control" id="horaFim" value="18:00" required>
+                </div>
+                <div class="mb-3">
+                  <label for="canais" class="form-label">Canais que você se compromete a silenciar após esse horário</label>
+                  <div class="row g-2">
+                    <div class="col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chSlack" value="Slack / Teams" checked>
+                        <label class="form-check-label" for="chSlack">Slack / Teams</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chEmail" value="E-mail corporativo" checked>
+                        <label class="form-check-label" for="chEmail">E-mail corporativo</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chIA" value="Ferramentas de IA de trabalho">
+                        <label class="form-check-label" for="chIA">Ferramentas de IA de trabalho</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chWhats" value="WhatsApp / Telegram profissional">
+                        <label class="form-check-label" for="chWhats">WhatsApp / Telegram profissional</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="rituais" class="form-label">Rituais de transição (selecione ao menos um)</label>
+                  <select class="form-select" id="rituais" multiple size="4" aria-describedby="rituaisHelp">
+                    <option value="Caminhada de 15 min sem fone">Caminhada de 15 min sem fone</option>
+                    <option value="Modo avião + bloquear notificações">Modo avião + bloquear notificações</option>
+                    <option value="Checklist de fechamento do dia (3 itens)">Checklist de fechamento do dia</option>
+                    <option value="Atividade analógica (leitura, esporte, cozinha)">Atividade analógica</option>
+                    <option value="Conversa presencial ou ligação com alguém próximo">Conversa presencial / ligação</option>
+                  </select>
+                  <div id="rituaisHelp" class="form-text">Segure Ctrl (ou Cmd) para selecionar vários.</div>
+                </div>
+                <div class="mb-4">
+                  <label for="excecao" class="form-label">Regra de exceção (opcional)</label>
+                  <input type="text" class="form-control" id="excecao" placeholder="Ex.: apenas se o cliente X enviar e-mail marcado como urgente">
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  <i class="bi bi-file-earmark-text me-2" aria-hidden="true"></i>Gerar protocolo
+                </button>
+              </form>
+
+              <div id="protocoloOutput" class="d-none mt-4">
+                <div class="protocol-box p-4" id="protocolContent">
+                  <!-- preenchido via JS -->
+                </div>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                  <button type="button" class="btn btn-outline-secondary" id="btnPrint">
+                    <i class="bi bi-printer me-1" aria-hidden="true"></i>Imprimir / PDF
+                  </button>
+                  <button type="button" class="btn btn-outline-primary" id="btnCopy">
+                    <i class="bi bi-clipboard me-1" aria-hidden="true"></i>Copiar texto
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ / ACCORDION ========== -->
+    <section id="faq" class="section-pad" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8 text-center">
+            <h2 id="faq-title" class="section-title">Perguntas e debates</h2>
+            <p class="section-subtitle">Pontos de reflexão sobre agência, métricas e saúde mental na era da copilotagem.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="accordionFaq">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    Usar IA o dia inteiro não é só produtividade?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body">
+                    Velocidade de entrega e redução de tarefas repetitivas são reais. O problema surge quando a IA ocupa o lugar do raciocínio de primeira ordem: a pessoa deixa de treinar julgamento, e a confiança interna depende de validação externa (incluindo a da própria máquina). Estudos mostram que a preocupação com IA já afeta a saúde mental de 71% da Gen Z.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    Trabalho remoto não deveria reduzir burnout?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body">
+                    Dados recentes apontam o oposto em parte dos casos: trabalhadores 100% remotos reportam burnout em torno de 61%, acima de híbridos e presenciais. Engajamento pode ser alto, mas solidão, tristeza e dificuldade de “desligar” aumentam — especialmente entre quem mora sozinho e na Geração Z.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    O que é “fadiga da decisão assistida”?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body">
+                    É o esgotamento cognitivo e emocional que aparece quando a maior parte das microdecisões técnicas ou laborais é mediada por sugestões de IA. Em vez de aliviar a carga, o volume constante de opções, o medo de “escolher pior que a máquina” e a perda de senso de autoria geram ansiedade e, a longo prazo, atrofia de confiança.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    Como preservar agência sem rejeitar a IA?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body">
+                    Definir regras explícitas: blocos de trabalho sem copilot para problemas centrais; auditoria crítica de todo código/texto gerado; rituais de desconexão; e métricas de sucesso que incluam qualidade de julgamento e bem-estar, não só throughput. A maestria está no diálogo crítico com a máquina, não na terceirização do intelecto.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== REFERÊNCIAS RÁPIDAS ========== -->
+    <section class="section-pad bg-alt" aria-labelledby="ref-title">
+      <div class="container">
+        <h2 id="ref-title" class="section-title text-center mb-4">Principais fontes</h2>
+        <div class="row g-3 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="ref-card glass-card p-3 h-100">
+              <span class="badge badge-soft mb-2">2025–2026</span>
+              <p class="mb-0 small">Eagle Hill Consulting / Apollo Technical — taxas de burnout por geração e por regime (remoto 61%, Gen Z 66%).</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="ref-card glass-card p-3 h-100">
+              <span class="badge badge-soft mb-2">2026</span>
+              <p class="mb-0 small">Deloitte Global Gen Z and Millennial Survey — fadiga digital (~58% Gen Z), burnout e bem-estar.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="ref-card glass-card p-3 h-100">
+              <span class="badge badge-soft mb-2">2026</span>
+              <p class="mb-0 small">Sylvia Brafman Mental Health Center — 71% da Gen Z relata impacto da preocupação com IA na saúde mental.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h2 class="h5 text-white mb-3">Copiloto 24/7</h2>
+          <p class="text-footer mb-0">
+            Projeto prático de Front-end &amp; Copilotagem com IA. Tema: fadiga da decisão assistida, agência técnica e saúde socioemocional da Geração Z no futuro do trabalho.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h3 class="h6 text-white">Navegação</h3>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#contexto">Contexto</a></li>
+            <li><a href="#dados">Dados</a></li>
+            <li><a href="#diagnostico">Diagnóstico</a></li>
+            <li><a href="#protocolo">Protocolo</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h3 class="h6 text-white">Entrega</h3>
+          <p class="text-footer small mb-1">Atividade avaliativa — Prof. Diego Marques de Carvalho</p>
+          <p class="text-footer small mb-0">HTML5 · CSS3 · Bootstrap 5 · Chart.js · JS Vanilla</p>
+        </div>
+      </div>
+      <hr class="footer-hr my-4">
+      <p class="text-center text-footer small mb-0">
+        “A maestria tecnológica no século XXI não pertence a quem programa isolado em um silo, nem a quem terceiriza seu intelecto para algoritmos, mas a quem sabe dialogar criticamente com a máquina.”
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
